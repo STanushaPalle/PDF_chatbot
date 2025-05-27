@@ -1,8 +1,8 @@
 site_name: Ollama PDF RAG
 site_description: Chat with your PDFs locally using Ollama and LangChain
-site_author: Tony Kipkemboi
-repo_url: https://github.com/tonykipkemboi/ollama_pdf_rag
-repo_name: tonykipkemboi/ollama_pdf_rag
+site_author: STanushaPalle
+repo_url: https://github.com/STanushaPalle/PDF_chatbot
+repo_name: STanushaPalle/PDF_chatbot
 
 theme:
   name: material

@@ -1,31 +1,25 @@
 # Installation Guide
 
-This guide will help you set up Ollama PDF RAG on your system.
+## Install Ollama
 
-## Prerequisites
-
-Before installing Ollama PDF RAG, ensure you have:
-
-1. Python 3.9 or higher installed
-2. pip (Python package installer)
-3. git installed
-4. Ollama installed on your system
-
-## Installing Ollama
-
-1. Visit [Ollama's website](https://ollama.ai) to download and install the application
+1. [Ollama's website](https://ollama.ai) - download and install the application
 2. After installation, pull the required models:
    ```bash
-   ollama pull llama3.2  # or your preferred model
+   ollama pull llama3.2  
+   ollama pull llava:7b  
+   ollama pull Zephyr:7b  
+   ollama pull mistral:latest
+   ollama pull deepseek-r1:7b
+   ollama pull gemma 3:1b
    ollama pull nomic-embed-text
    ```
 
-## Installing Ollama PDF RAG
+## Installing Ollama PDF Chatbot
 
-1. Clone the repository:
+1. Clone repository:
    ```bash
-   git clone https://github.com/tonykipkemboi/ollama_pdf_rag.git
-   cd ollama_pdf_rag
+   git clone https://github.com/STanushaPalle/PDF_chatbot
+   cd PDF_chatbot
    ```
 
 2. Create and activate a virtual environment:
@@ -50,12 +44,12 @@ Before installing Ollama PDF RAG, ensure you have:
 2. Run the application:
    ```bash
    python run.py
+   #or
+   #python -m streamlit run run.py
    ```
 3. Open your browser to `http://localhost:8501`
 
 ## Troubleshooting
-
-### Common Issues
 
 #### ONNX DLL Error
 If you see this error:
@@ -74,23 +68,3 @@ Try these solutions:
    pip uninstall onnxruntime onnxruntime-gpu
    pip install onnxruntime
    ```
-
-#### CPU-Only Systems
-
-For systems without a GPU:
-
-1. Install CPU version of ONNX Runtime:
-   ```bash
-   pip uninstall onnxruntime-gpu
-   pip install onnxruntime
-   ```
-
-2. Adjust chunk size if needed:
-   - Reduce to 500-1000 for memory issues
-   - Increase overlap for better context
-
-## Next Steps
-
-- Follow the [Quick Start Guide](quickstart.md) to begin using the application
-- Read the [User Guide](../user-guide/pdf-processing.md) for detailed usage instructions
-- Check out the [Contributing Guide](../development/contributing.md) if you want to help develop the project 
