@@ -14,6 +14,10 @@ import pdfplumber
 import ollama
 import warnings
 
+
+ollama_host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+ollama = ollama.Client(host=ollama_host)
+
 # Suppress torch warning
 warnings.filterwarnings('ignore', category=UserWarning, message='.*torch.classes.*')
 
